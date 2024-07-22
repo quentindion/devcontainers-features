@@ -1,0 +1,6 @@
+{
+  "name": "alpine-php-mssql",
+  "id": "alpine-php-mssql",
+  "version": "0.0.1",
+  "description": "Installs mssql driver for php on alpine.",
+}
