@@ -6,6 +6,6 @@ Installs mssql driver for php on alpine.
 
 ```json
 "features": {
-    "ghcr.io/quentindion/devcontainers-features/alpine-php-mssql:latest": {}
+    "ghcr.io/quentindion/devcontainers-features/alpine-php-mssql:0": {}
 }
 ```
