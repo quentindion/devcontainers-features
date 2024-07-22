@@ -1,0 +1,6 @@
+{
+  "name": "alpine-php-redis",
+  "id": "alpine-php-redis",
+  "version": "0.0.1",
+  "description": "Installs redis driver for php on alpine.",
+}
