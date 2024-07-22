@@ -6,6 +6,6 @@ Installs ohmyzsh codespace theme on alpine dev container.
 
 ```json
 "features": {
-    "ghcr.io/quentindion/devcontainers-features/alpine-ohmyzsh-codespace-theme:latest": {}
+    "ghcr.io/quentindion/devcontainers-features/alpine-ohmyzsh-codespace-theme:0": {}
 }
 ```
