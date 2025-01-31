@@ -3,14 +3,12 @@ set -e
 
 USERNAME="$(id -u -n)"
 
-# ** Shell customization section **
 if [ "$USERNAME" = "root" ]; then 
     user_rc_path="/root"
 else
     user_rc_path="/home/$USERNAME"
 fi
 
-# Codespaces bash and OMZ themes - partly inspired by https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/robbyrussell.zsh-theme
 codespaces_zsh="$(cat \
 <<'EOF'
 # Codespaces zsh prompt theme
