@@ -21,8 +21,8 @@ __zsh_prompt() {
     else
         prompt_username="%n"
     fi
-    PROMPT="%{$fg[green]%}${prompt_username} %(?:%{$reset_color%}➜ :%{$fg_bold[red]%}➜ )" # User/exit code arrow
-    PROMPT+=' %{$fg_bold[blue]%}%(5~|%-1~/…/%3~|%4~)%{$reset_color%} ' # cwd
+    PROMPT="%{$fg[green]%}${prompt_username} %(?:%{$reset_color%}➜ :%{$fg_bold[red]%}➜ ) " # User/exit code arrow
+    PROMPT+='%{$fg_bold[blue]%}%(5~|%-1~/…/%3~|%4~)%{$reset_color%} ' # cwd
     PROMPT+='$(git_prompt_info)%{$fg[white]%}$ %{$reset_color%}' # Git status
     unset -f __zsh_prompt
 }
