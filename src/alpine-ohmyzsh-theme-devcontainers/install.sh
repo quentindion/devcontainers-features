@@ -1,12 +1,12 @@
 #!/bin/sh
 set -e
 
-if [ -z "$_CONTAINER_USER_HOME" ]; then
-  if [ -z "$_CONTAINER_USER" ]; then
-    _CONTAINER_USER_HOME=/root
-  else
-    _CONTAINER_USER_HOME=$(getent passwd $_CONTAINER_USER | cut -d: -f6)
-  fi
+USERNAME="${USERNAME:-$(id -u -n)}"
+
+if [ "$USERNAME" = "root" ]; then 
+    user_rc_path="/root"
+else
+    user_rc_path="/home/$USERNAME"
 fi
 
 codespaces_zsh="$(cat \
