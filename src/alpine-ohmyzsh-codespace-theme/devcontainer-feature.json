@@ -1,9 +1,0 @@
-{
-    "name": "alpine-ohmyzsh-codespace-theme",
-    "id": "alpine-ohmyzsh-codespace-theme",
-    "version": "0.0.2",
-    "description": "Installs ohmyzsh codespace theme on alpine dev container.",
-    "installsAfter": [
-        "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh"
-    ]
-}

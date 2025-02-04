@@ -1,0 +1,9 @@
+{
+    "name": "alpine-ohmyzsh-theme-devcontainers",
+    "id": "alpine-ohmyzsh-theme-devcontainers",
+    "version": "0.0.3",
+    "description": "Installs ohmyzsh devcontainers theme on alpine dev container.",
+    "installsAfter": [
+        "ghcr.io/cirolosapio/devcontainers-features/alpine-ohmyzsh"
+    ]
+}
