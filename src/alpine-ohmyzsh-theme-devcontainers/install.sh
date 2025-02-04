@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-USERNAME="$(id -u -n)"
+USERNAME="${USERNAME:-$(id -u -n)}"
 
 if [ "$USERNAME" = "root" ]; then 
     user_rc_path="/root"
