@@ -1,12 +1,12 @@
 #!/bin/sh
 set -e
 
-USERNAME="${USERNAME:-$(id -u -n)}"
-
-if [ "$USERNAME" = "root" ]; then 
-    user_rc_path="/root"
-else
-    user_rc_path="/home/$USERNAME"
+if [ -z "$_CONTAINER_USER_HOME" ]; then
+  if [ -z "$_CONTAINER_USER" ]; then
+    _CONTAINER_USER_HOME=/root
+  else
+    _CONTAINER_USER_HOME=$(getent passwd $_CONTAINER_USER | cut -d: -f6)
+  fi
 fi
 
 codespaces_zsh="$(cat \
@@ -59,9 +59,9 @@ fi
 EOF
 )"
 
-oh_my_install_dir="${user_rc_path}/.oh-my-zsh"
+oh_my_install_dir="${_CONTAINER_USER_HOME}/.oh-my-zsh"
 template_path="${oh_my_install_dir}/templates/zshrc.zsh-template"
-user_rc_file="${user_rc_path}/.zshrc"
+user_rc_file="${_CONTAINER_USER_HOME}/.zshrc"
 
 echo -e "$(cat "${template_path}")\nDISABLE_AUTO_UPDATE=true\nDISABLE_UPDATE_PROMPT=true" > ${user_rc_file}
 echo "${codespaces_zsh}" > "${oh_my_install_dir}/custom/themes/devcontainers.zsh-theme"
