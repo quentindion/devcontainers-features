@@ -1,11 +1,11 @@
-# alpine-ohmyzsh-codespace-theme
+# alpine-ohmyzsh-theme-devcontainers
 
-Installs ohmyzsh codespace theme on alpine dev container.
+Installs ohmyzsh devcontainers theme on alpine dev container.
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/quentindion/devcontainers-features/alpine-ohmyzsh-codespace-theme:0": {}
+    "ghcr.io/quentindion/devcontainers-features/alpine-ohmyzsh-theme-devcontainers:0": {}
 }
 ```
