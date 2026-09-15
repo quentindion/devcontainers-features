@@ -1,0 +1,11 @@
+{
+  "name": "alpine-bun",
+  "id": "alpine-bun",
+  "version": "0.0.1",
+  "description": "Installs bun on alpine",
+  "keywords": [
+    "alpine",
+    "bun"
+  ],
+  "documentationURL": "https://github.com/quentindion/devcontainers-features/tree/main/src/alpine-bun"
+}
